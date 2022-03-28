@@ -11,27 +11,27 @@
   <title>Dashboard sales - Modern Admin - Clean Bootstrap 4 Dashboard HTML Template + Bitcoin
     Dashboard
   </title>
-  <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
-  <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
+  <link rel="apple-touch-icon" href="./app-assets/images/ico/apple-icon-120.png">
+  <link rel="shortcut icon" type="image/x-icon" href="./app-assets/images/ico/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
     rel="stylesheet">
   <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
   <!-- BEGIN VENDOR CSS-->
-  <link rel="stylesheet" type="text/css" href="../../../app-assets/css/vendors.css">
+  <link rel="stylesheet" type="text/css" href="./app-assets/css/vendors.css">
   <!-- END VENDOR CSS-->
   <!-- BEGIN MODERN CSS-->
-  <link rel="stylesheet" type="text/css" href="../../../app-assets/css/app.css">
+  <link rel="stylesheet" type="text/css" href="./app-assets/css/app.css">
   <!-- END MODERN CSS-->
   <!-- BEGIN Page Level CSS-->
-  <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
-  <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css">
-  <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css">
-  <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/charts/morris.css">
-  <link rel="stylesheet" type="text/css" href="../../../app-assets/fonts/simple-line-icons/style.css">
-  <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css">
+  <link rel="stylesheet" type="text/css" href="./app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
+  <link rel="stylesheet" type="text/css" href="./app-assets/css/core/colors/palette-gradient.css">
+  <link rel="stylesheet" type="text/css" href="./app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css">
+  <link rel="stylesheet" type="text/css" href="./app-assets/vendors/css/charts/morris.css">
+  <link rel="stylesheet" type="text/css" href="./app-assets/fonts/simple-line-icons/style.css">
+  <link rel="stylesheet" type="text/css" href="./app-assets/css/core/colors/palette-gradient.css">
   <!-- END Page Level CSS-->
   <!-- BEGIN Custom CSS-->
-  <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   <!-- END Custom CSS-->
 </head>
 
@@ -46,7 +46,7 @@
               href="#"><i class="ft-menu font-large-1"></i></a></li>
           <li class="nav-item mr-auto">
             <a class="navbar-brand" href="index.html">
-              <img class="brand-logo" alt="modern admin logo" src="../../../app-assets/images/logo/logo.png">
+              <img class="brand-logo" alt="modern admin logo" src="./app-assets/images/logo/logo.png">
               <h3 class="brand-text">Modern Admin</h3>
             </a>
           </li>
@@ -67,7 +67,7 @@
                   <h6 class="dropdown-menu-header text-uppercase mb-1"><i class="la la-newspaper-o"></i> News</h6>
                   <div id="mega-menu-carousel-example">
                     <div>
-                      <img class="rounded img-fluid mb-1" src="../../../app-assets/images/slider/slider-2.png" alt="First slide"><a
+                      <img class="rounded img-fluid mb-1" src="./app-assets/images/slider/slider-2.png" alt="First slide"><a
                         class="news-title mb-0" href="#">Poster Frame PSD</a>
                       <p class="news-content">
                         <span class="font-small-2">January 26, 2018</span>
@@ -209,7 +209,7 @@
                   <span class="user-name text-bold-700">John Doe</span>
                 </span>
                 <span class="avatar avatar-online">
-                  <img src="../../../app-assets/images/portrait/small/avatar-s-19.png" alt="avatar"><i></i></span>
+                  <img src="./app-assets/images/portrait/small/avatar-s-19.png" alt="avatar"><i></i></span>
               </a>
               <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#"><i class="ft-user"></i>
                   Edit Profile</a>
@@ -319,7 +319,7 @@
                     <div class="media">
                       <div class="media-left">
                         <span class="avatar avatar-sm avatar-online rounded-circle">
-                          <img src="../../../app-assets/images/portrait/small/avatar-s-19.png" alt="avatar"><i></i></span>
+                          <img src="./app-assets/images/portrait/small/avatar-s-19.png" alt="avatar"><i></i></span>
                       </div>
                       <div class="media-body">
                         <h6 class="media-heading">Margaret Govan</h6>
@@ -334,7 +334,7 @@
                     <div class="media">
                       <div class="media-left">
                         <span class="avatar avatar-sm avatar-busy rounded-circle">
-                          <img src="../../../app-assets/images/portrait/small/avatar-s-2.png" alt="avatar"><i></i></span>
+                          <img src="./app-assets/images/portrait/small/avatar-s-2.png" alt="avatar"><i></i></span>
                       </div>
                       <div class="media-body">
                         <h6 class="media-heading">Bret Lezama</h6>
@@ -349,7 +349,7 @@
                     <div class="media">
                       <div class="media-left">
                         <span class="avatar avatar-sm avatar-online rounded-circle">
-                          <img src="../../../app-assets/images/portrait/small/avatar-s-3.png" alt="avatar"><i></i></span>
+                          <img src="./app-assets/images/portrait/small/avatar-s-3.png" alt="avatar"><i></i></span>
                       </div>
                       <div class="media-body">
                         <h6 class="media-heading">Carie Berra</h6>
@@ -364,7 +364,7 @@
                     <div class="media">
                       <div class="media-left">
                         <span class="avatar avatar-sm avatar-away rounded-circle">
-                          <img src="../../../app-assets/images/portrait/small/avatar-s-6.png" alt="avatar"><i></i></span>
+                          <img src="./app-assets/images/portrait/small/avatar-s-6.png" alt="avatar"><i></i></span>
                       </div>
                       <div class="media-body">
                         <h6 class="media-heading">Eric Alsobrook</h6>
@@ -720,63 +720,63 @@
         <li class=" nav-item"><a href="#"><i class="la la-puzzle-piece"></i><span class="menu-title" data-i18n="nav.starter_kit.main">Starter
               kit</span></a>
           <ul class="menu-content">
-            <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-1-column.html"
+            <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-1-column.html"
                 data-i18n="nav.starter_kit.1_column">1 column</a>
             </li>
-            <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-2-columns.html"
+            <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-2-columns.html"
                 data-i18n="nav.starter_kit.2_columns">2 columns</a>
             </li>
             <li><a class="menu-item" href="#" data-i18n="nav.starter_kit.3_columns_detached.main">Content Det. Sidebar</a>
               <ul class="menu-content">
-                <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-content-detached-left-sidebar.html"
+                <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-content-detached-left-sidebar.html"
                     data-i18n="nav.starter_kit.3_columns_detached.3_columns_detached_left_sidebar">Detached left
                     sidebar</a>
                 </li>
-                <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-content-detached-left-sticky-sidebar.html"
+                <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-content-detached-left-sticky-sidebar.html"
                     data-i18n="nav.starter_kit.3_columns_detached.3_columns_detached_sticky_left_sidebar">Detached
                     sticky left sidebar</a>
                 </li>
-                <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-content-detached-right-sidebar.html"
+                <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-content-detached-right-sidebar.html"
                     data-i18n="nav.starter_kit.3_columns_detached.3_columns_detached_right_sidebar">Detached right
                     sidebar</a>
                 </li>
-                <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-content-detached-right-sticky-sidebar.html"
+                <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-content-detached-right-sticky-sidebar.html"
                     data-i18n="nav.starter_kit.3_columns_detached.3_columns_detached_sticky_right_sidebar">Detached
                     sticky right sidebar</a>
                 </li>
               </ul>
             </li>
             <li class="navigation-divider"></li>
-            <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-fixed-navbar.html"
+            <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-fixed-navbar.html"
                 data-i18n="nav.starter_kit.fixed_navbar">Fixed navbar</a>
             </li>
-            <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-fixed-navigation.html"
+            <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-fixed-navigation.html"
                 data-i18n="nav.starter_kit.fixed_navigation">Fixed navigation</a>
             </li>
-            <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-fixed-navbar-navigation.html"
+            <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-fixed-navbar-navigation.html"
                 data-i18n="nav.starter_kit.fixed_navbar_navigation">Fixed navbar &amp; navigation</a>
             </li>
-            <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-fixed-navbar-footer.html"
+            <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-fixed-navbar-footer.html"
                 data-i18n="nav.starter_kit.fixed_navbar_footer">Fixed navbar &amp; footer</a>
             </li>
             <li class="navigation-divider"></li>
-            <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-fixed.html"
+            <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-fixed.html"
                 data-i18n="nav.starter_kit.fixed_layout">Fixed layout</a>
             </li>
-            <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-boxed.html"
+            <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-boxed.html"
                 data-i18n="nav.starter_kit.boxed_layout">Boxed layout</a>
             </li>
-            <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-static.html"
+            <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-static.html"
                 data-i18n="nav.starter_kit.static_layout">Static layout</a>
             </li>
             <li class="navigation-divider"></li>
-            <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-light.html"
+            <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-light.html"
                 data-i18n="nav.starter_kit.light_layout">Light layout</a>
             </li>
-            <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-dark.html"
+            <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-dark.html"
                 data-i18n="nav.starter_kit.dark_layout">Dark layout</a>
             </li>
-            <li><a class="menu-item" href="../../../starter-kit/ltr/vertical-modern-menu-template/layout-semi-dark.html"
+            <li><a class="menu-item" href="./starter-kit/ltr/vertical-modern-menu-template/layout-semi-dark.html"
                 data-i18n="nav.starter_kit.semi_dark_layout">Semi dark layout</a>
             </li>
           </ul>
@@ -1936,17 +1936,17 @@
                           <ul class="list-unstyled users-list m-0">
                             <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons"
                               class="avatar avatar-sm pull-up">
-                              <img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-4.png"
+                              <img class="media-object rounded-circle" src="./app-assets/images/portrait/small/avatar-s-4.png"
                                 alt="Avatar">
                             </li>
                             <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres"
                               class="avatar avatar-sm pull-up">
-                              <img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-5.png"
+                              <img class="media-object rounded-circle" src="./app-assets/images/portrait/small/avatar-s-5.png"
                                 alt="Avatar">
                             </li>
                             <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Rebecca Jones"
                               class="avatar avatar-sm pull-up">
-                              <img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-6.png"
+                              <img class="media-object rounded-circle" src="./app-assets/images/portrait/small/avatar-s-6.png"
                                 alt="Avatar">
                             </li>
                             <li class="avatar avatar-sm">
@@ -1971,12 +1971,12 @@
                           <ul class="list-unstyled users-list m-0">
                             <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons"
                               class="avatar avatar-sm pull-up">
-                              <img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-7.png"
+                              <img class="media-object rounded-circle" src="./app-assets/images/portrait/small/avatar-s-7.png"
                                 alt="Avatar">
                             </li>
                             <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres"
                               class="avatar avatar-sm pull-up">
-                              <img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-8.png"
+                              <img class="media-object rounded-circle" src="./app-assets/images/portrait/small/avatar-s-8.png"
                                 alt="Avatar">
                             </li>
                             <li class="avatar avatar-sm">
@@ -2001,17 +2001,17 @@
                           <ul class="list-unstyled users-list m-0">
                             <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons"
                               class="avatar avatar-sm pull-up">
-                              <img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-1.png"
+                              <img class="media-object rounded-circle" src="./app-assets/images/portrait/small/avatar-s-1.png"
                                 alt="Avatar">
                             </li>
                             <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres"
                               class="avatar avatar-sm pull-up">
-                              <img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-2.png"
+                              <img class="media-object rounded-circle" src="./app-assets/images/portrait/small/avatar-s-2.png"
                                 alt="Avatar">
                             </li>
                             <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Rebecca Jones"
                               class="avatar avatar-sm pull-up">
-                              <img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-3.png"
+                              <img class="media-object rounded-circle" src="./app-assets/images/portrait/small/avatar-s-3.png"
                                 alt="Avatar">
                             </li>
                             <li class="avatar avatar-sm">
@@ -2036,12 +2036,12 @@
                           <ul class="list-unstyled users-list m-0">
                             <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons"
                               class="avatar avatar-sm pull-up">
-                              <img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-11.png"
+                              <img class="media-object rounded-circle" src="./app-assets/images/portrait/small/avatar-s-11.png"
                                 alt="Avatar">
                             </li>
                             <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres"
                               class="avatar avatar-sm pull-up">
-                              <img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-12.png"
+                              <img class="media-object rounded-circle" src="./app-assets/images/portrait/small/avatar-s-12.png"
                                 alt="Avatar">
                             </li>
                           </ul>
@@ -2063,12 +2063,12 @@
                           <ul class="list-unstyled users-list m-0">
                             <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Kimberly Simmons"
                               class="avatar avatar-sm pull-up">
-                              <img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-6.png"
+                              <img class="media-object rounded-circle" src="./app-assets/images/portrait/small/avatar-s-6.png"
                                 alt="Avatar">
                             </li>
                             <li data-toggle="tooltip" data-popup="tooltip-custom" data-original-title="Willie Torres"
                               class="avatar avatar-sm pull-up">
-                              <img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-4.png"
+                              <img class="media-object rounded-circle" src="./app-assets/images/portrait/small/avatar-s-4.png"
                                 alt="Avatar">
                             </li>
                           </ul>
@@ -2153,23 +2153,23 @@
     </p>
   </footer>
   <!-- BEGIN VENDOR JS-->
-  <script src="../../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+  <script src="./app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
   <!-- BEGIN PAGE VENDOR JS-->
-  <script src="../../../app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
-  <script src="../../../app-assets/vendors/js/charts/raphael-min.js" type="text/javascript"></script>
-  <script src="../../../app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>
-  <script src="../../../app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js" type="text/javascript"></script>
-  <script src="../../../app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js" type="text/javascript"></script>
-  <script src="../../../app-assets/data/jvector/visitor-data.js" type="text/javascript"></script>
+  <script src="./app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
+  <script src="./app-assets/vendors/js/charts/raphael-min.js" type="text/javascript"></script>
+  <script src="./app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>
+  <script src="./app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js" type="text/javascript"></script>
+  <script src="./app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js" type="text/javascript"></script>
+  <script src="./app-assets/data/jvector/visitor-data.js" type="text/javascript"></script>
   <!-- END PAGE VENDOR JS-->
   <!-- BEGIN MODERN JS-->
-  <script src="../../../app-assets/js/core/app-menu.js" type="text/javascript"></script>
-  <script src="../../../app-assets/js/core/app.js" type="text/javascript"></script>
-  <script src="../../../app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+  <script src="./app-assets/js/core/app-menu.js" type="text/javascript"></script>
+  <script src="./app-assets/js/core/app.js" type="text/javascript"></script>
+  <script src="./app-assets/js/scripts/customizer.js" type="text/javascript"></script>
   <!-- END MODERN JS-->
   <!-- BEGIN PAGE LEVEL JS-->
-  <script src="../../../app-assets/js/scripts/pages/dashboard-sales.js" type="text/javascript"></script>
+  <script src="./app-assets/js/scripts/pages/dashboard-sales.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
 </body>
 
