@@ -30,7 +30,9 @@
     $var2 = "Hi there, I'm a Software Developer!";
     echo strpos($var2,'!');
     echo "<br>";
-    echo substr($var2, 0, strpos($var2, ',') + 1);
+    echo $var2[5];
+    echo "<br>";
+    echo substr($var2, 9, strpos($var2, ',') + 1); // substr(text, start, length);
     echo "<br>";
 
 
