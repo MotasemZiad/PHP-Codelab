@@ -1,0 +1,17 @@
+
+  <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+    <div class="main-menu-content">
+      <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+        <li class="nav-item"><a href="index.php"><i class="la la-home"></i><span class="menu-title" data-i18n="nav.dash.main">Dashboard</span><span
+              class="badge badge badge-info badge-pill float-right mr-2">3</span></a>
+        </li>
+        <li class="nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">Categories</span></a>
+          <ul class="menu-content">
+                <li><a class="menu-item" href="add_category.php" data-i18n="nav.templates.horz.classic">Add a new category</a>
+                </li>
+                <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="nav.templates.horz.top_icon">All Categories</a>
+                </li>
+          </ul> 
+        </li>
+    </div>
+  </div>
