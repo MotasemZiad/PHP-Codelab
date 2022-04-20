@@ -48,7 +48,12 @@
                                         <tbody>
                                             <?php 
                                                 include_once('db/db_connection.php');
-                                                $query = 'SELECT * FROM categories ORDER BY id DESC';
+                                                $limit = 3;
+                                                $page = $_GET['page'] ?? 1; 
+                                                $offset = ($page - 1) * $limit;
+
+
+                                                $query = "SELECT * FROM categories ORDER BY id DESC LIMIT $limit OFFSET $offset";
                                                 $result = mysqli_query($connection, $query);
                                                 if(mysqli_num_rows($result) > 0){
                                                     while($row = mysqli_fetch_assoc($result)){
@@ -78,6 +83,21 @@
                                         </tbody>
                                     </table>
                                     <div class="justify-content-center d-flex">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <?php
+                                                    $query = "SELECT count(id) AS row_number FROM categories";
+                                                    $result = mysqli_query($connection, $query);
+                                                    $row = mysqli_fetch_assoc($result);
+                                                    $pages = ceil($row['row_number'] / $limit);
+
+                                                    echo "<ul class='pagination'>";
+                                                    for ($i=1; $i <= $pages; $i++) { 
+                                                        echo "<li class='page-item'><a href='show_all_categories.php?page=". $i ."' class='page-link'> $i </a> </li>";
+                                                    }
+                                                ?>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
