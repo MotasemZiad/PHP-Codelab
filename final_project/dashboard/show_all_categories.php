@@ -48,7 +48,7 @@
                                         <tbody>
                                             <?php 
                                                 include_once('db/db_connection.php');
-                                                $limit = 3;
+                                                $limit = 4;
                                                 $page = $_GET['page'] ?? 1; 
                                                 $offset = ($page - 1) * $limit;
 
