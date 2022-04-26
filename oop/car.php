@@ -33,6 +33,7 @@ class Car {
 
 $c = new Car("BMW", "Green");
 $c1 = new Car("Fiat", "Black");
+$c2 = new Car("Kia", "Grey");
 echo $c->getName();
 echo "<br>";
 echo $c->getColor();
