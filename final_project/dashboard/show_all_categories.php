@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 
-<?php include_once("shared/header.php"); ?>
+<?php include_once('shared/header.php'); ?>
 
 <body class="vertical-layout vertical-menu-modern 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu-modern"
   data-col="2-columns">
@@ -42,7 +42,6 @@
                                             <th> Category Details</th>
                                             <th>Status</th>
                                             <th colspan="2"></th>
-
                                         </tr>
                                         </thead>
                                         <tbody>

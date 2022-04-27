@@ -20,5 +20,13 @@
                 </li>
           </ul> 
         </li>
+        <li class="nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">Products</span></a>
+          <ul class="menu-content">
+                <li><a class="menu-item" href="add_product.php" data-i18n="nav.templates.horz.classic">Add a new product</a>
+                </li>
+                <li><a class="menu-item" href="show_all_products.php" data-i18n="nav.templates.horz.top_icon">All Products</a>
+                </li>
+          </ul> 
+        </li>
     </div>
   </div>

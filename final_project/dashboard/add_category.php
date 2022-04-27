@@ -1,5 +1,5 @@
 <?php
-    include_once("db/db_connection.php");
+    include_once('db/db_connection.php');
     $errors = [];
     $success = false;
     if($_SERVER['REQUEST_METHOD'] == "POST"){
