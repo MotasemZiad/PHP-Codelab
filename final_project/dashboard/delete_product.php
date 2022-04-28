@@ -1,0 +1,3 @@
+<?php
+    // Delete Product Page
+?>
