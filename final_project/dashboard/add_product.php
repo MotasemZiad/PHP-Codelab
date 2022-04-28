@@ -1,2 +1,3 @@
 <?php 
-    # Add Product Page 
+    echo "Add Product";
+?>

@@ -1,3 +1,3 @@
 <?php
-    // Delete Product Page
+    echo "Delete Product";
 ?>

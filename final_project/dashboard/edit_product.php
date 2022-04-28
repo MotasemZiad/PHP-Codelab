@@ -1,3 +1,3 @@
 <?php
-    # Edit Product Page
+    echo "Edit Product";
 ?>

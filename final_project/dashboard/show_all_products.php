@@ -1,1 +1,3 @@
-// Show all products page 
+<?php 
+    echo "Show All Products";
+?>
