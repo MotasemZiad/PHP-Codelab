@@ -1,3 +1,4 @@
 <?php 
-    echo "Add Product";
+    echo "Add Product<br>";
+    echo "Some fucking updates";
 ?>
