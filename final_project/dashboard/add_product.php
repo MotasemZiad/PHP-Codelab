@@ -1,34 +1,65 @@
 <?php
-    // include_once('db/db_connection.php');
-    // $errors = [];
-    // $success = false;
-    // if($_SERVER['REQUEST_METHOD'] == "POST"){
-    //     $name = $_POST['category_name'];
-    //     $description = $_POST['category_description'];
-    //     $status = isset($_POST['category_status']) ? 1 : 0;
-    //     $date = Date("y-m-d h:i:s");
+    include_once('db/db_connection.php');
+    $errors = [];
+    $success = false;
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        $name = $_POST['name'];
+        $description = $_POST['description'];
+        $first_price = $_POST['first_price'];
+        $price = $_POST['price'];
+        $quantity = $_POST['quantity'];
+        $category_id = $_POST['category_id'];
+        $status = isset($_POST['status']) ? 1 : 0;
+        $date = Date("y-m-d h:i:s");
 
-    //     if(empty($name)){
-    //       $errors["name_error"] = "Name is required!";
-    //     }
-    //     if(empty($description)){
-    //       $errors["description_error"] = "Description is required!";
-    //     }
+        # Image 
+        $file_name = $_FILES['image']['name'];
+        $file_size = $_FILES['image']['size'];
+        $file_type = $_FILES['image']['type'];
+        $file_tmp_name = $_FILES['image']['tmp_name'];
 
-    //     if(count($errors) > 0){
-    //       $errors['general_error'] = "Please fill fields";
-    //     }else {
-    //       $query = "INSERT INTO categories(name, description, status, created_at) VALUES('$name', '$description', '$status', '$date')";
-    //       $result = mysqli_query($connection, $query);
-    //       if($result){
-    //           $errors = [];
-    //           $success = true;
-    //           header('Location: show_all_categories.php');
-    //       }else {
-    //           $errors['general_error'] = "Error". mysqli_error($connection);
-    //       }  
-    //     }
-    // }
+        $file_extension = pathinfo($file_name, PATHINFO_EXTENSION);
+        $file_random_name = time() . rand(1, 10000) . ".$file_extension"; // file_random_name is actually an image
+        $upload_path = 'uploads/images/' . $file_random_name;
+        move_uploaded_file($file_tmp_name, $upload_path);
+
+        if(empty($name)){
+          $errors["name_error"] = "Name is required!";
+        }
+        if(empty($description)){
+          $errors["description_error"] = "Description is required!";
+        }
+        if(empty($first_price)){
+          $errors["first_price_error"] = "First Price is required!";
+        }
+        if(empty($price)){
+          $errors["price_error"] = "Price is required!";
+        }
+        if(empty($quantity)){
+          $errors["quantity_error"] = "Quantity is required!";
+        }
+        if($file_size > 20000){
+          $errors["image_error"] = "Image is too large!";
+        }
+        if($file_type != "png" || $file_type != "jpg" || $file_type != "jpeg"){
+          $errors["image_error"] = "Image must be from type png or jpg!";
+        }
+
+
+        if(count($errors) > 0){
+          $errors['general_error'] = "Please fill fields";
+        }else {
+          $query = "INSERT INTO products(name, description, first_price, price, quantity, category_id, image, status, created_at) VALUES('$name', '$description', '$first_price', '$price', '$quantity', '$category_id', '$file_random_name', '$status', '$date')";
+          $result = mysqli_query($connection, $query);
+          if($result){
+              $errors = [];
+              $success = true;
+              // header('Location: show_all_categories.php');
+          }else {
+              $errors['general_error'] = "Error". mysqli_error($connection);
+          }  
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -66,13 +97,13 @@
                 <div class="card-content collapse show">
                   <div class="card-body">
                   <?php
-                    // if(!empty($errors['general_error'])){
-                    //   echo "<div class='alert alert-danger'>". $errors['general_error']. "</div>";
-                    // }elseif($success){
-                    //   echo "<div class='alert alert-success'> Category added successfully</div>";
-                    // }
+                    if(!empty($errors['general_error'])){
+                      echo "<div class='alert alert-danger'>". $errors['general_error']. "</div>";
+                    }elseif($success){
+                      echo "<div class='alert alert-success'> Category added successfully</div>";
+                    }
                   ?>
-                    <form class="form" method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
+                    <form class="form" method="POST" enctype="multipart/form-data" action="<?php $_SERVER['PHP_SELF'] ?>">
                       <div class="form-body">
                         <h4 class="form-section"><i class="ft-user"></i>Add a new product</h4>
                         <div class="row">
@@ -80,11 +111,11 @@
                             <div class="form-group">
                               <label for="projectinput1">Name</label>
                               <input type="text" id="projectinput1" class="form-control" placeholder="Enter the name of the product"
-                              name="product_name">
+                              name="name">
                               <?php
-                                // if(!empty($errors['name_error'])){
-                                //   echo "<span class='text-danger'>". $errors['name_error']. "</span>";
-                                // }
+                                if(!empty($errors['name_error'])){
+                                  echo "<span class='text-danger'>". $errors['name_error']. "</span>";
+                                }
                               ?>
                             </div>
                           </div>
@@ -92,11 +123,11 @@
                             <div class="form-group">
                               <label for="projectinput2">Description</label>
                               <input type="text" id="projectinput2" class="form-control" placeholder="Enter the description of the product"
-                              name="product_description">
+                              name="description">
                               <?php
-                                // if(!empty($errors['description_error'])){
-                                //   echo "<span class='text-danger'>". $errors['description_error']. "</span>";
-                                // }
+                                if(!empty($errors['description_error'])){
+                                  echo "<span class='text-danger'>". $errors['description_error']. "</span>";
+                                }
                               ?>
                             </div>
                           </div>
@@ -108,9 +139,9 @@
                               <input type="number" id="projectinput1" class="form-control" placeholder="Enter the first price of the product"
                               name="first_price">
                               <?php
-                                // if(!empty($errors['name_error'])){
-                                //   echo "<span class='text-danger'>". $errors['name_error']. "</span>";
-                                // }
+                                if(!empty($errors['first_price_error'])){
+                                  echo "<span class='text-danger'>". $errors['first_price_error']. "</span>";
+                                }
                               ?>
                             </div>
                           </div>
@@ -120,9 +151,9 @@
                               <input type="number" id="projectinput2" class="form-control" placeholder="Enter the final price of the product"
                               name="price">
                               <?php
-                                // if(!empty($errors['description_error'])){
-                                //   echo "<span class='text-danger'>". $errors['description_error']. "</span>";
-                                // }
+                                if(!empty($errors['price_error'])){
+                                  echo "<span class='text-danger'>". $errors['price_error']. "</span>";
+                                }
                               ?>
                             </div>
                           </div>
@@ -134,16 +165,16 @@
                               <input type="number" id="projectinput1" class="form-control" placeholder="Enter the quantity"
                               name="quantity">
                               <?php
-                                // if(!empty($errors['name_error'])){
-                                //   echo "<span class='text-danger'>". $errors['name_error']. "</span>";
-                                // }
+                                if(!empty($errors['quantity_error'])){
+                                  echo "<span class='text-danger'>". $errors['quantity_error']. "</span>";
+                                }
                               ?>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
                               <label for="projectinput2">Category</label>
-                              <select class="form-control" name="Category">
+                              <select class="form-control" name="category_id">
                               <?php
                                 include_once('db/db_connection.php');
                                 $query = 'SELECT * FROM categories';
@@ -151,9 +182,6 @@
                                 while($row = mysqli_fetch_assoc($result)){
                                     echo '<option value='. $row['id'] .'>' . $row['name'] . '</option>';
                                 }
-                                // if(!empty($errors['description_error'])){
-                                //   echo "<span class='text-danger'>". $errors['description_error']. "</span>";
-                                // }
                               ?>
                               </select>
                             </div>
@@ -166,16 +194,16 @@
                               <input type="file" id="projectinput1" class="form-control"
                               name="image">
                               <?php
-                                // if(!empty($errors['name_error'])){
-                                //   echo "<span class='text-danger'>". $errors['name_error']. "</span>";
-                                // }
+                                if(!empty($errors['image_error'])){
+                                  echo "<span class='text-danger'>". $errors['image_error']. "</span>";
+                                }
                               ?>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
                               <label for="projectinput3">Status</label>
-                              <input type="checkbox" id="projectinput3" name="product_status" value="1">
+                              <input type="checkbox" id="projectinput3" name="status" value="1">
                             </div>
                           </div>
                         </div>
