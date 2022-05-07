@@ -38,12 +38,12 @@
         if(empty($quantity)){
           $errors["quantity_error"] = "Quantity is required!";
         }
-        if($file_size > 20000){
-          $errors["image_error"] = "Image is too large!";
-        }
-        if($file_type != "png" || $file_type != "jpg" || $file_type != "jpeg"){
-          $errors["image_error"] = "Image must be from type png or jpg!";
-        }
+        // if($file_size > 20000){
+        //   $errors["image_error"] = "Image is too large!";
+        // }
+        // if($file_type != "png" || $file_type != "jpg" || $file_type != "jpeg"){
+        //   $errors["image_error"] = "Image must be from type png or jpg!";
+        // }
 
 
         if(count($errors) > 0){
@@ -54,7 +54,7 @@
           if($result){
               $errors = [];
               $success = true;
-              // header('Location: show_all_categories.php');
+              header('Location: show_all_products.php');
           }else {
               $errors['general_error'] = "Error". mysqli_error($connection);
           }  
@@ -136,7 +136,7 @@
                           <div class="col-md-6">
                             <div class="form-group">
                               <label for="projectinput1">First Price</label>
-                              <input type="number" id="projectinput1" class="form-control" placeholder="Enter the first price of the product"
+                              <input type="number" step="0.01" id="projectinput1" class="form-control" placeholder="Enter the first price of the product"
                               name="first_price">
                               <?php
                                 if(!empty($errors['first_price_error'])){
@@ -148,7 +148,7 @@
                           <div class="col-md-6">
                             <div class="form-group">
                               <label for="projectinput2">Final Price</label>
-                              <input type="number" id="projectinput2" class="form-control" placeholder="Enter the final price of the product"
+                              <input type="number" step="0.01" id="projectinput2" class="form-control" placeholder="Enter the final price of the product"
                               name="price">
                               <?php
                                 if(!empty($errors['price_error'])){
