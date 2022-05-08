@@ -60,6 +60,8 @@
       $result = mysqli_query($connection, $query);
       $row = mysqli_fetch_assoc($result);
     }
+
+    // Finish all the tasks except the image part
 ?>
 
 
