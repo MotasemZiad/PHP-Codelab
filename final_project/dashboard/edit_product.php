@@ -77,10 +77,10 @@
                     if(!empty($errors['general_error'])){
                       echo "<div class='alert alert-danger'>". $errors['general_error']. "</div>";
                     }elseif($success){
-                      echo "<div class='alert alert-success'> Category added successfully</div>";
+                      echo "<div class='alert alert-success'> Product updated successfully</div>";
                     }
                   ?>
-                    <form class="form" method="POST" enctype="multipart/form-data" action="<?php $_SERVER['PHP_SELF'] ?>">
+                    <form class="form" method="POST" enctype="multipart/form-data" action="<?php $_SERVER['PHP_SELF'] . "?id=$id" ?>">
                       <div class="form-body">
                         <h4 class="form-section"><i class="ft-user"></i>Edit product</h4>
                         <div class="row">
@@ -187,7 +187,7 @@
                       </div>
                       <div class="form-actions">
                         <button type="submit" class="btn btn-primary">
-                            Add 
+                            Update 
                         </button>
                       </div>
                     </form>
