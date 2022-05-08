@@ -3,10 +3,25 @@
     $errors = [];
     $success = false;
     if($_SERVER['REQUEST_METHOD'] == "POST"){
-        $name = $_POST['category_name'];
-        $description = $_POST['category_description'];
-        $status = isset($_POST['category_status']) ? 1 : 0;
+        $name = $_POST['name'];
+        $description = $_POST['description'];
+        $first_price = $_POST['first_price'];
+        $price = $_POST['price'];
+        $quantity = $_POST['quantity'];
+        $category_id = $_POST['category_id'];
+        $status = isset($_POST['status']) ? 1 : 0;
         $date = Date("y-m-d h:i:s");
+
+        # Image 
+        $file_name = $_FILES['image']['name'];
+        $file_size = $_FILES['image']['size'];
+        $file_type = $_FILES['image']['type'];
+        $file_tmp_name = $_FILES['image']['tmp_name'];
+
+        $file_extension = pathinfo($file_name, PATHINFO_EXTENSION);
+        $file_random_name = time() . rand(1, 10000) . ".$file_extension"; // file_random_name is actually an image
+        $upload_path = 'uploads/images/' . $file_random_name;
+        move_uploaded_file($file_tmp_name, $upload_path);
 
         if(empty($name)){
           $errors["name_error"] = "Name is required!";
@@ -14,27 +29,36 @@
         if(empty($description)){
           $errors["description_error"] = "Description is required!";
         }
+        if(empty($first_price)){
+          $errors["first_price_error"] = "First Price is required!";
+        }
+        if(empty($price)){
+          $errors["price_error"] = "Price is required!";
+        }
+        if(empty($quantity)){
+          $errors["quantity_error"] = "Quantity is required!";
+        }
 
         if(count($errors) > 0){
           $errors['general_error'] = "Please fill fields";
         }else {
-          $query = "UPDATE categories SET name='$name', description='$description', status='$status', updated_at='$date' WHERE id='".$_GET['id']."' ";
+          $query = "UPDATE products SET name='$name', description='$description', first_price='$first_price', price='$price', quantity='$quantity', category_id='$category_id', image='$file_random_name', status='$status' WHERE id='".$_GET['id']."' ";
           $result = mysqli_query($connection, $query);
           if($result){
               $errors = [];
               $success = true;
-              header('Location: show_all_categories.php');
+              header('Location: show_all_products.php');
           }else {
               $errors['general_error'] = "Error". mysqli_error($connection);
           }  
         }
     }
-
+    
     if(isset($_GET['id'])){
-        $id = $_GET['id'];
-        $query = "SELECT * FROM categories WHERE id = $id"; 
-        $result = mysqli_query($connection, $query);
-        $row = mysqli_fetch_assoc($result);
+      $id = $_GET['id'];
+      $query = "SELECT * FROM products WHERE id = $id"; 
+      $result = mysqli_query($connection, $query);
+      $row = mysqli_fetch_assoc($result);
     }
 ?>
 
@@ -88,7 +112,7 @@
                             <div class="form-group">
                               <label for="projectinput1">Name</label>
                               <input type="text" id="projectinput1" class="form-control" placeholder="Enter the name of the product"
-                              name="name">
+                              name="name" value="<?php echo $row['name'] ?>">
                               <?php
                                 if(!empty($errors['name_error'])){
                                   echo "<span class='text-danger'>". $errors['name_error']. "</span>";
@@ -100,7 +124,7 @@
                             <div class="form-group">
                               <label for="projectinput2">Description</label>
                               <input type="text" id="projectinput2" class="form-control" placeholder="Enter the description of the product"
-                              name="description">
+                              name="description" value="<?php echo $row['description'] ?>">
                               <?php
                                 if(!empty($errors['description_error'])){
                                   echo "<span class='text-danger'>". $errors['description_error']. "</span>";
@@ -114,7 +138,7 @@
                             <div class="form-group">
                               <label for="projectinput1">First Price</label>
                               <input type="number" step="0.01" id="projectinput1" class="form-control" placeholder="Enter the first price of the product"
-                              name="first_price">
+                              name="first_price" value="<?php echo $row['first_price'] ?>">
                               <?php
                                 if(!empty($errors['first_price_error'])){
                                   echo "<span class='text-danger'>". $errors['first_price_error']. "</span>";
@@ -126,7 +150,7 @@
                             <div class="form-group">
                               <label for="projectinput2">Final Price</label>
                               <input type="number" step="0.01" id="projectinput2" class="form-control" placeholder="Enter the final price of the product"
-                              name="price">
+                              name="price" value="<?php echo $row['price'] ?>">
                               <?php
                                 if(!empty($errors['price_error'])){
                                   echo "<span class='text-danger'>". $errors['price_error']. "</span>";
@@ -140,7 +164,7 @@
                             <div class="form-group">
                               <label for="projectinput1">Quantity</label>
                               <input type="number" id="projectinput1" class="form-control" placeholder="Enter the quantity"
-                              name="quantity">
+                              name="quantity" value="<?php echo $row['quantity'] ?>">
                               <?php
                                 if(!empty($errors['quantity_error'])){
                                   echo "<span class='text-danger'>". $errors['quantity_error']. "</span>";
@@ -156,8 +180,8 @@
                                 include_once('db/db_connection.php');
                                 $query = 'SELECT * FROM categories';
                                 $result = mysqli_query($connection, $query);
-                                while($row = mysqli_fetch_assoc($result)){
-                                    echo '<option value='. $row['id'] .'>' . $row['name'] . '</option>';
+                                while($category_row = mysqli_fetch_assoc($result)){
+                                    echo '<option value='. $category_row['id'] .'>' . $category_row['name'] . '</option>';
                                 }
                               ?>
                               </select>
@@ -169,7 +193,7 @@
                             <div class="form-group">
                               <label for="projectinput1">Image</label>
                               <input type="file" id="projectinput1" class="form-control"
-                              name="image">
+                              name="image" value="<?php echo $row['image'] ?>">
                               <?php
                                 if(!empty($errors['image_error'])){
                                   echo "<span class='text-danger'>". $errors['image_error']. "</span>";
@@ -180,7 +204,13 @@
                           <div class="col-md-6">
                             <div class="form-group">
                               <label for="projectinput3">Status</label>
-                              <input type="checkbox" id="projectinput3" name="status" value="1">
+                              <input type="checkbox" id="projectinput3" name="status" value="1" 
+                              <?php 
+                                    if($row['status'] == 1){
+                                        echo "checked";
+                                    }
+                                ?>
+                              >
                             </div>
                           </div>
                         </div>
