@@ -1,0 +1,9 @@
+# GET http://localhost/web2/api/get_users.php 
+POST http://localhost/web2/api/add_user.php
+content-type: application/json
+
+{
+    "username": "Sara Doe",
+    "email": "sara@hotmail.com",
+    "password": "1234897"
+}
