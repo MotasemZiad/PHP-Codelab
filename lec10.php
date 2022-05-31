@@ -1,15 +1,23 @@
 <?php 
+    session_start();
     if($_SERVER['REQUEST-METHOD'] == "POST"){
-        if(isset($_POST['course_name']) && $_POST['course_name'] > 11){
+        if(isset($_POST['course_name'])){
             $name = $_POST['course_name'];
-            $created_at = new date.now();
+            $created_at = Date('d-m-Y h-i-s');
+            $created_by = $_SESSION['user_id'];
             $connection = mysqli_connect('localhost', 'root', '', 'university');
 
             if(!$connection){
                 echo mysqli_connect_error();
             }
+            if(strlen($name) > 11 ){
+                $query = "INSERT INTO courses(name, created_at, created_by) VALUES('$name', '$date', '$created_by')";
+                $result = mysqli_query($connection, $query);
 
-            $query = 'INSERT INTO courses(name, created_at, created_by) VALUES('$')'
+                if($result){
+                    echo "True";
+                }
+            }
         }
     }
 ?>

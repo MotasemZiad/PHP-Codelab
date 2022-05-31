@@ -99,4 +99,6 @@
     $fruits = ['Apple', 'Strawberry', 'Orange', 'Pineapple', 'Banana', 'Lemon', 'Watermelon'];
     $numbers = [1,2,3,4,5];
     echo calculateAverage($numbers) . "<br>";
+
+    echo date('Y-M-D h:i:s') . "<br>";
 ?>
