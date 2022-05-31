@@ -52,10 +52,12 @@
                         'email': $('input[name="email"]').val(),
                         'phone': $('input[name="phone"]').val()
                     },
+                    // Success called when the action doesn't return any error
                     success: function(response){
                         var obj = JSON.parse(response);
                         alert(obj.message);
                     },
+                    // Error called when the action return an error like (syntax errors or run time errors)
                     error: function(response, error){
                     } 
                 });
