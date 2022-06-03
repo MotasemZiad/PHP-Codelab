@@ -78,10 +78,10 @@
 
     $input = 6;
 
-    if($input == 5){
-        $value = "Large";
-    }else if($input < 5){
-        $value = "Small";
-    }
+    // if($input == 5){
+    //     $value = "Large";
+    // }else if($input < 5){
+    //     $value = "Small";
+    // }
 
-    echo $value . "<br>"; # Undefined variable $value
+    // echo $value . "<br>"; # Undefined variable $value
