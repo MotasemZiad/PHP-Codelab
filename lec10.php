@@ -35,7 +35,7 @@
         Article <input type="text" name="article"> <br>
         Word <input type="text" name="word"> <br>
         <button type="submit">Search</button>
-        <!-- http://example.com/search?article=&word=sami --> 
+        <!-- http://example.com/search?article=&word=technology --> 
     </form>
 </body>
 </html>

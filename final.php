@@ -75,3 +75,13 @@
     $city = array_keys($arr)[0];
 
     echo $city . "<br>";
+
+    $input = 6;
+
+    if($input == 5){
+        $value = "Large";
+    }else if($input < 5){
+        $value = "Small";
+    }
+
+    echo $value . "<br>"; # Undefined variable $value
