@@ -1,21 +1,22 @@
 <?php 
     include_once 'db_connection.php';
     $students_table_name = 'students';
-    $first_name_column_name = 'first_name';
-    $last_name_column_name = 'last_name';
+    $first_name_column_name = 'name';
+    $last_name_column_name = 'phone';
     $email_column_name = 'email';
 
-    /*
-    $query = "INSERT INTO $students_table_name($first_name_column_name, $last_name_column_name, $email_column_name) VALUES('Saleem', 'Fawzy', 'saleem@gmail.com')";
+    
+    // $query = "INSERT INTO $students_table_name($first_name_column_name, $last_name_column_name, $email_column_name) VALUES('Khalid', 'Taha', 'khtaha@gmail.com')";
 
-    $result = mysqli_query($connection, $query);
-    if($result){
-        echo "Success";
-    }else {
-        echo "Error". mysqli_error($connection);
-    }
+    // $result = mysqli_query($connection, $query);
+    // echo $result . "<br>";
+    // if($result){
+    //     echo "Success";
+    // }else {
+    //     echo "Error". mysqli_error($connection);
+    // }
 
-    */
+    
 
     echo "
         <table>
@@ -31,7 +32,7 @@
     $query = "SELECT * FROM $students_table_name";
     $result = mysqli_query($connection, $query);
     
-    if(mysqli_num_rows($result) > 0){
+    if(mysqli_num_rows($result) > 0){ 
         while ($row = mysqli_fetch_assoc($result)){
             echo "<tr>
             <td>. $row[$first_name_column_name]. </td>
@@ -44,7 +45,6 @@
             </table>
         ";
     } 
-
 
 
 
